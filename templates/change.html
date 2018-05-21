@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change password
+{% endblock %}
+
+{% block main %}
+   <script src="/static/pass_validator.js"></script>
+    <form action="/change" method="post" onsubmit="return check_passwd(this)">
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="New password" type="password"/>
+        </div>
+         <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Re-enter new password" type="password"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Change</button>
+    </form>
+{% endblock %}

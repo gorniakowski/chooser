@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    INDEX
+{% endblock %}
+
+{% block main %}
+<h1>People are:
+{% if global_score>0 %}
+    good
+{% else %}
+    bad
+{% endif %}
+</h1>
+<h2>Global score so far is : {{global_score}}</h2>
+
+{% endblock %}
