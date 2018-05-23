@@ -28,6 +28,7 @@ class User(db.Model):
         return '<User %r>' % self.username
 
 # Ensure responses aren't cached for dev purposes only i hoooppe
+'''
 @app.after_request
 def after_request(response):
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
@@ -35,7 +36,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     response.headers['Cache-Control'] = 'public, max-age=0'
     return response
-
+'''
 #meh meh
 def login_required(f):
     """
